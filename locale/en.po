@@ -1,0 +1,177 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: lokalise.com\n"
+"Project-Id-Version: SushiSwap Interface\n"
+"PO-Revision-Date: 2021-05-05 14:23\n"
+"Last-Translator: lokalise.com\n"
+"Language-Team: lokalise.com\n\n"
+"Language: en\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"Plural-Forms: \n"
+
+#: src/components/Header/index.tsx:57
+msgid "Add USDC to your MetaMask wallet"
+msgstr "Add USDC to your MetaMask wallet"
+
+#: src/components/WalletModal/index.tsx:306
+msgid "Back"
+msgstr "Back"
+
+#: src/features/ramp/index.tsx:44
+#: src/features/transak/index.tsx:68
+msgid "Buy"
+msgstr "Buy"
+
+#: src/components/TransactionList.tsx:27
+msgid "Clear History"
+msgstr "Clear History"
+
+#: src/components/TransactionConfirmationModal/index.tsx:42
+msgid "Confirm this transaction in your wallet"
+msgstr "Confirm this transaction in your wallet"
+
+#: src/components/WalletModal/index.tsx:311
+#: src/components/Web3Connect/index.tsx:40
+msgid "Connect to a wallet"
+msgstr "Connect to a wallet"
+
+#: src/components/Header/More.tsx:17
+#: src/components/Menu.tsx:18
+msgid "Dev"
+msgstr "Dev"
+
+#: src/components/WalletModal/index.tsx:278
+msgid "Disconnect"
+msgstr "Disconnect"
+
+#: src/components/Header/More.tsx:27
+#: src/components/Menu.tsx:28
+msgid "Discord"
+msgstr "Discord"
+
+#: src/components/TransactionFailedModal.tsx:34
+msgid "Dismiss"
+msgstr "Dismiss"
+
+#: src/components/Header/More.tsx:12
+#: src/components/Menu.tsx:13
+msgid "Docs"
+msgstr "Docs"
+
+#: src/components/Header/More.tsx:18
+#: src/components/Menu.tsx:19
+msgid "Documentation for developers of ManyUses."
+msgstr "Documentation for developers of ManyUses."
+
+#: src/components/Header/More.tsx:13
+#: src/components/Menu.tsx:14
+msgid "Documentation for users of ManyUses."
+msgstr "Documentation for users of ManyUses."
+
+#: src/components/TransactionConfirmationModal/index.tsx:121
+#: src/components/Web3Connect/index.tsx:28
+msgid "Error"
+msgstr "Error"
+
+#: src/components/WalletModal/index.tsx:268
+msgid "Error connecting"
+msgstr "Error connecting"
+
+#: src/components/WalletModal/index.tsx:274
+msgid "Error connecting. Try refreshing the page."
+msgstr "Error connecting. Try refreshing the page."
+
+#: src/components/Back.tsx:23
+msgid "Go Back"
+msgstr "Go Back"
+
+#: src/components/Header/More.tsx:28
+#: src/components/Menu.tsx:29
+msgid "Join the community on Discord."
+msgstr "Join the community on Discord."
+
+#: src/components/WalletModal/index.tsx:328
+msgid "Learn more about wallets"
+msgstr "Learn more about wallets"
+
+#: src/pages/profile.tsx:58
+msgid "Loading"
+msgstr "Loading"
+
+#: src/components/Header/More.tsx:23
+#: src/components/Menu.tsx:24
+msgid "ManyUses is a supporter of Open Source."
+msgstr "ManyUses is a supporter of Open Source."
+
+#: src/components/Footer/index.tsx:21
+msgid "Matic Bridge"
+msgstr "Matic Bridge"
+
+#: src/components/WalletModal/index.tsx:327
+msgid "New to Ethereum?"
+msgstr "New to Ethereum?"
+
+#: src/components/Web3ReactManager/index.tsx:60
+msgid "Oops! An unknown error occurred. Please refresh the page, or visit from another browser or device"
+msgstr "Oops! An unknown error occurred. Please refresh the page, or visit from another browser or device"
+
+#: src/components/Header/More.tsx:22
+#: src/components/Menu.tsx:23
+msgid "Open Source"
+msgstr "Open Source"
+
+#: src/components/Header/index.tsx:138
+msgid "Open main menu"
+msgstr "Open main menu"
+
+#: src/components/Web3Status/index.tsx:120
+msgid "Pending"
+msgstr "Pending"
+
+#: src/components/WalletModal/index.tsx:272
+msgid "Please connect to the appropriate Ethereum network."
+msgstr "Please connect to the appropriate Ethereum network."
+
+#: src/components/Header/index.tsx:43
+#: src/components/Header/index.tsx:180
+#: src/pages/profile.tsx:40
+msgid "Profile"
+msgstr "Profile"
+
+#: src/components/TransactionConfirmationModal/index.tsx:73
+msgid "Transaction Submitted"
+msgstr "Transaction Submitted"
+
+#: src/pages/profile.tsx:75
+msgid "View on explorer"
+msgstr "View on explorer"
+
+#: src/components/TransactionConfirmationModal/index.tsx:39
+msgid "Waiting for Confirmation"
+msgstr "Waiting for Confirmation"
+
+#: src/components/WalletModal/index.tsx:268
+msgid "Wrong Network"
+msgstr "Wrong Network"
+
+#: src/components/Web3Connect/index.tsx:28
+msgid "You are on the wrong network"
+msgstr "You are on the wrong network"
+
+#: src/components/TransactionList.tsx:24
+msgid "Your Transaction History on {0}"
+msgstr "Your Transaction History on {0}"
+
+#: src/components/Gas/index.tsx:14
+#: src/pages/profile.tsx:34
+msgid "failed to load"
+msgstr "failed to load"
+
+#: src/components/Gas/index.tsx:15
+#: src/pages/profile.tsx:35
+msgid "loading..."
+msgstr "loading..."
