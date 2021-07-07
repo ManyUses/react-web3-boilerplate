@@ -10,12 +10,9 @@ import ApplicationUpdater from '../state/application/updater'
 import DefaultLayout from '../layouts/Default'
 import { FC } from 'react'
 import Head from 'next/head'
-import ListsUpdater from '../state/lists/updater'
-import MulticallUpdater from '../state/multicall/updater'
 import { NextComponentType } from 'next'
 import ReactGA from 'react-ga'
 import { Provider as ReduxProvider } from 'react-redux'
-import TransactionUpdater from '../state/transactions/updater'
 import UserUpdater from '../state/user/updater'
 import Web3ReactManager from '../components/Web3ReactManager'
 import { Web3ReactProvider } from '@web3-react/core'
@@ -34,11 +31,8 @@ if (typeof window !== 'undefined' && !!window.ethereum) {
 function Updaters() {
   return (
     <>
-      <ListsUpdater />
       <UserUpdater />
       <ApplicationUpdater />
-      <TransactionUpdater />
-      <MulticallUpdater />
     </>
   )
 }

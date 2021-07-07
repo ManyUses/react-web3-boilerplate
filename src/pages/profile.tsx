@@ -5,7 +5,6 @@ import Dots from '../components/Dots'
 import Head from 'next/head'
 import Copy from '../components/AccountDetails/Copy'
 import React from 'react'
-import TransactionList from '../components/TransactionList'
 import { getExplorerLink } from '../functions/explorer'
 import { shortenAddress } from '../functions/format'
 import { t } from '@lingui/macro'
@@ -14,7 +13,7 @@ import { useETHBalances } from '../state/wallet/hooks'
 import { useLingui } from '@lingui/react'
 
 import Lottie from 'lottie-react'
-import anim from '../animation/network-switcher.json'
+import anim from '../animation/wallet.json'
 
 function Transactions() {
   const { i18n } = useLingui()
@@ -78,10 +77,6 @@ function Transactions() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="w-full max-w-2xl p-4 rounded bg-dark-900">
-        <TransactionList transactions={data.items} />
       </div>
 
       {/* <Lottie animationData={anim} autoplay loop /> */}

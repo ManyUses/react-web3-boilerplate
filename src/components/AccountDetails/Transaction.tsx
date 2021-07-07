@@ -82,14 +82,6 @@ const IconWrapper = styled.div<{
     pending ? theme.primary1 : success ? theme.green1 : cancelled ? theme.red3 : theme.red1};
 `
 
-const calculateSecondsUntilDeadline = (tx: TransactionDetails): number => {
-  if (tx?.archer?.deadline && tx?.addedTime) {
-    const millisecondsUntilUntilDeadline = tx.archer.deadline * 1000 - Date.now()
-    return millisecondsUntilUntilDeadline < 0 ? -1 : Math.ceil(millisecondsUntilUntilDeadline / 1000)
-  }
-  return -1
-}
-
 export default function Transaction({ hash }: { hash: string }): any {
   const { chainId } = useActiveWeb3React()
   const allTransactions = useAllTransactions()
