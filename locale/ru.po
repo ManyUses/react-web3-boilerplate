@@ -64,12 +64,12 @@ msgstr "Документы"
 
 #: src/components/Header/More.tsx:18
 #: src/components/Menu.tsx:19
-msgid "Documentation for developers of ManyUses."
+msgid "Documentation for developers of FungyProof."
 msgstr ""
 
 #: src/components/Header/More.tsx:13
 #: src/components/Menu.tsx:14
-msgid "Documentation for users of ManyUses."
+msgid "Documentation for users of FungyProof."
 msgstr ""
 
 #: src/components/TransactionConfirmationModal/index.tsx:121
@@ -104,7 +104,7 @@ msgstr "Загрузка"
 
 #: src/components/Header/More.tsx:23
 #: src/components/Menu.tsx:24
-msgid "ManyUses is a supporter of Open Source."
+msgid "FungyProof is a supporter of Open Source."
 msgstr ""
 
 #: src/components/Footer/index.tsx:21

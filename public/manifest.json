@@ -1,8 +1,8 @@
 {
-  "short_name": "ManyUses",
-  "name": "ManyUses Web3 App",
+  "short_name": "FungyProof",
+  "name": "FungyProof Web3 App",
   "lang": "en",
-  "description": "ManyUses web3 boilerplate",
+  "description": "FungyProof web3 boilerplate",
   "background_color": "#FFFFFF",
   "theme_color": "#F338C3",
   "dir": "ltr",

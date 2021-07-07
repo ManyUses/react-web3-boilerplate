@@ -89,7 +89,7 @@ export const walletconnect = new WalletConnectConnector({
 export const lattice = new LatticeConnector({
   chainId: 1,
   url: RPC[ChainId.MAINNET],
-  appName: 'ManyUses',
+  appName: 'FungyProof',
 })
 
 // mainnet only
@@ -107,7 +107,7 @@ export const portis = new PortisConnector({
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: RPC[ChainId.MAINNET],
-  appName: 'ManyUses',
+  appName: 'FungyProof',
   appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png',
 })
 

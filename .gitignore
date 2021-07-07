@@ -22,4 +22,6 @@ public/workbox*.js.map
 /locale/_build/
 /locale/**/*.js
 
+/ipfs
+
 .env

@@ -27,7 +27,7 @@ export default function Buy() {
 
     const widget = new RampInstantSDK({
       userAddress: account,
-      hostAppName: 'ManyUses',
+      hostAppName: 'FungyProof',
       hostLogoUrl: 'http://sushiswap-interface-canary.vercel.app/_next/image?url=%2Flogo.png&w=32&q=75',
       defaultAsset: DEFAULT_CRYPTO_CURRENCY[chainId],
     })

@@ -22,7 +22,7 @@ function Transactions() {
   const { account, chainId } = useActiveWeb3React()
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
-  // TODO get ManyUses enrichment transactions
+  // TODO get FP enrichment transactions
   const { data, error }: SWRResponse<any, Error> = useSWR(
     `https://api.covalenthq.com/v1/${chainId}/address/${account}/stacks/sushiswap/acts/?&key=ckey_cba3674f2ce5450f9d5dd290589&swaps=true&quote-currency=usd`,
     (url) =>
@@ -37,7 +37,7 @@ function Transactions() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Profile`)} | ManyUses</title>
+        <title>{i18n._(t`Profile`)} | FungyProof</title>
         <meta name="description" content="Proile..." />
       </Head>
 

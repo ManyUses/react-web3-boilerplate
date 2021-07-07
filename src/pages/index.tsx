@@ -4,8 +4,8 @@ export default function Dashboard() {
   return (
     <>
       <Head>
-        <title>Dashboard | ManyUses</title>
-        <meta name="description" content="ManyUses" />
+        <title>Dashboard | FungyProof</title>
+        <meta name="description" content="FungyProof" />
       </Head>
     </>
   )

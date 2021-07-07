@@ -157,7 +157,7 @@ export default function NetworkModal(): JSX.Element | null {
     <Modal isOpen={networkModalOpen} onDismiss={toggleNetworkModal} maxWidth={768}>
       <ModalHeader onClose={toggleNetworkModal} title="Select a Network" />
       <div className="mb-6 text-lg text-primary">
-        You are currently browsing <span className="font-bold text-black">ManyUses</span>
+        You are currently browsing <span className="font-bold text-black">FungyProof</span>
         <br /> on the <span className="font-bold text-blue">{NETWORK_LABEL[chainId]}</span> network
       </div>
 
@@ -165,15 +165,15 @@ export default function NetworkModal(): JSX.Element | null {
         {[
           ChainId.MAINNET,
           ChainId.MATIC,
-          ChainId.FANTOM,
-          ChainId.ARBITRUM,
-          ChainId.OKEX,
-          ChainId.HECO,
+          // ChainId.FANTOM,
+          // ChainId.ARBITRUM,
+          // ChainId.OKEX,
+          // ChainId.HECO,
           ChainId.BSC,
-          ChainId.XDAI,
-          ChainId.HARMONY,
-          ChainId.AVALANCHE,
-          ChainId.CELO,
+          // ChainId.XDAI,
+          // ChainId.HARMONY,
+          // ChainId.AVALANCHE,
+          // ChainId.CELO,
         ].map((key: ChainId, i: number) => {
           if (chainId === key) {
             return (

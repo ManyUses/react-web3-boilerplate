@@ -49,6 +49,7 @@
     "@web3-react/torus-connector": "^6.1.9",
     "@web3-react/walletconnect-connector": "^6.2.0",
     "@web3-react/walletlink-connector": "^6.2.0",
+    "@fungyproof/eth-nft": "file://Users/mikeroth/Dev/fungyproof/sdk/packages/eth-nft",
     "copy-to-clipboard": "^3.3.1",
     "eth-permit": "^0.1.9",
     "ethers": "^5.1.4",

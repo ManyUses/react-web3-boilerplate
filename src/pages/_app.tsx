@@ -1,6 +1,6 @@
 import '../bootstrap'
 import '../styles/index.css'
-import '@fontsource/dm-sans/index.css'
+import '@fontsource/work-sans/index.css'
 import 'react-tabs/style/react-tabs.css'
 
 import LanguageProvider, { activate } from '../language'

@@ -10,17 +10,17 @@ import { useLingui } from '@lingui/react'
 const items = (i18n: I18n) => [
   {
     name: i18n._(t`Docs`),
-    description: i18n._(t`Documentation for users of ManyUses.`),
+    description: i18n._(t`Documentation for users of FungyProof.`),
     href: 'https://docs.manyuses.com',
   },
   {
     name: i18n._(t`Dev`),
-    description: i18n._(t`Documentation for developers of ManyUses.`),
+    description: i18n._(t`Documentation for developers of FungyProof.`),
     href: 'https://dev.manyuses.com',
   },
   {
     name: i18n._(t`Open Source`),
-    description: i18n._(t`ManyUses is a supporter of Open Source.`),
+    description: i18n._(t`FungyProof is a supporter of Open Source.`),
     href: 'https://github.com/manyuses',
   },
   {
@@ -39,10 +39,7 @@ export default function Menu() {
       {({ open }) => (
         <>
           <Popover.Button
-            className={classNames(
-              open ? 'text-primary' : 'text-secondary',
-              'focus:outline-none hover:text-gray-400'
-            )}
+            className={classNames(open ? 'text-primary' : 'text-secondary', 'focus:outline-none hover:text-gray-400')}
           >
             <svg
               width="16px"

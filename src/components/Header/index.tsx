@@ -31,7 +31,7 @@ function AppBar(): JSX.Element {
             <div className="px-4 py-4">
               <div className="flex items-center justify-between uppercase">
                 <div className="flex items-center">
-                  <Image src="/logo.jpg" alt="ManyUses" width="32px" height="32px" />
+                  <Image src="/logo.jpg" alt="FungyProof" width="32px" height="32px" />
                   <div className="hidden sm:block sm:ml-4">
                     <div className="flex space-x-2">
                       <Buy />
@@ -41,6 +41,14 @@ function AppBar(): JSX.Element {
                           className="p-2 text-baseline text-primary rounded-md border border-transparent hover:border-black active:border-black focus:border-black md:p-3 whitespace-nowrap"
                         >
                           {i18n._(t`Profile`)}
+                        </a>
+                      </NavLink>
+                      <NavLink href="/registry">
+                        <a
+                          id={`Registry-nav-link`}
+                          className="p-2 text-baseline text-primary rounded-md border border-transparent hover:border-black active:border-black focus:border-black md:p-3 whitespace-nowrap"
+                        >
+                          {i18n._(t`Registry`)}
                         </a>
                       </NavLink>
                     </div>
@@ -88,7 +96,7 @@ function AppBar(): JSX.Element {
                                     })
                                     .then((success) => {
                                       if (success) {
-                                        console.log('Successfully added SUSHI to MetaMask')
+                                        console.log('Successfully added USDC to MetaMask')
                                       } else {
                                         throw new Error('Something went wrong.')
                                       }

@@ -64,13 +64,13 @@ msgstr "Docs"
 
 #: src/components/Header/More.tsx:18
 #: src/components/Menu.tsx:19
-msgid "Documentation for developers of ManyUses."
-msgstr "Documentation for developers of ManyUses."
+msgid "Documentation for developers of FungyProof."
+msgstr "Documentation for developers of FungyProof."
 
 #: src/components/Header/More.tsx:13
 #: src/components/Menu.tsx:14
-msgid "Documentation for users of ManyUses."
-msgstr "Documentation for users of ManyUses."
+msgid "Documentation for users of FungyProof."
+msgstr "Documentation for users of FungyProof."
 
 #: src/components/TransactionConfirmationModal/index.tsx:121
 #: src/components/Web3Connect/index.tsx:28
@@ -104,8 +104,8 @@ msgstr "Loading"
 
 #: src/components/Header/More.tsx:23
 #: src/components/Menu.tsx:24
-msgid "ManyUses is a supporter of Open Source."
-msgstr "ManyUses is a supporter of Open Source."
+msgid "FungyProof is a supporter of Open Source."
+msgstr "FungyProof is a supporter of Open Source."
 
 #: src/components/Footer/index.tsx:21
 msgid "Matic Bridge"

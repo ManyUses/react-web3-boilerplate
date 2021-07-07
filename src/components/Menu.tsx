@@ -11,17 +11,17 @@ import { useLingui } from '@lingui/react'
 const items = (i18n: I18n) => [
   {
     name: i18n._(t`Docs`),
-    description: i18n._(t`Documentation for users of ManyUses.`),
+    description: i18n._(t`Documentation for users of FungyProof.`),
     href: 'https://docs.manyuses.com',
   },
   {
     name: i18n._(t`Dev`),
-    description: i18n._(t`Documentation for developers of ManyUses.`),
+    description: i18n._(t`Documentation for developers of FungyProof.`),
     href: 'https://dev.manyuses.com',
   },
   {
     name: i18n._(t`Open Source`),
-    description: i18n._(t`ManyUses is a supporter of Open Source.`),
+    description: i18n._(t`FungyProof is a supporter of Open Source.`),
     href: 'https://github.com/manyuses/manyuses',
   },
   {

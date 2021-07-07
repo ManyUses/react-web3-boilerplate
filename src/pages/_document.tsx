@@ -32,14 +32,11 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" dir="ltr">
         <Head>
-          <meta name="application-name" content="ManyUses App" />
+          <meta name="application-name" content="FungyProof App" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-          <meta name="apple-mobile-web-app-title" content="ManyUses App" />
-          <meta
-            name="description"
-            content="..."
-          />
+          <meta name="apple-mobile-web-app-title" content="FungyProof App" />
+          <meta name="description" content="..." />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="msapplication-config" content="/icons/browserconfig.xml" />
@@ -60,20 +57,14 @@ export default class MyDocument extends Document {
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://manyuses.com" />
-          <meta name="twitter:title" content="ManyUses App" />
-          <meta
-            name="twitter:description"
-            content="..."
-          />
+          <meta name="twitter:title" content="FungyProof App" />
+          <meta name="twitter:description" content="..." />
           <meta name="twitter:image" content="https://manyuses.com/icons/android-chrome-192x192.png" />
           <meta name="twitter:creator" content="@FungyProofSwap" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="ManyUses App" />
-          <meta
-            property="og:description"
-            content="..."
-          />
-          <meta property="og:site_name" content="ManyUses App" />
+          <meta property="og:title" content="FungyProof App" />
+          <meta property="og:description" content="..." />
+          <meta property="og:site_name" content="FungyProof App" />
           <meta property="og:url" content="https://manyuses.com" />
           <meta property="og:image" content="https://manyuses.com/icons/apple-touch-icon.png" />
 
