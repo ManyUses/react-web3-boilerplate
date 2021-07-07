@@ -3,9 +3,7 @@
 import { ChainId, ROUTER_ADDRESS } from '@sushiswap/sdk'
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 
-import { ARCHER_ROUTER_ADDRESS } from '../constants'
 import { AddressZero } from '@ethersproject/constants'
-import ArcherSwapRouterABI from '../constants/abis/ArcherSwapRouter.json'
 import { Contract } from '@ethersproject/contracts'
 import { isAddress } from '../functions/validate'
 
@@ -33,8 +31,4 @@ export function getRouterAddress(chainId?: ChainId) {
     throw Error(`Undefined 'chainId' parameter '${chainId}'.`)
   }
   return ROUTER_ADDRESS[chainId]
-}
-
-export function getArcherRouterContract(chainId: number, library: Web3Provider, account?: string): Contract {
-  return getContract(ARCHER_ROUTER_ADDRESS[chainId as ChainId] ?? '', ArcherSwapRouterABI, library, account)
 }

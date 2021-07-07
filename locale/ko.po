@@ -13,7 +13,7 @@ msgstr ""
 "POT-Creation-Date: \n"
 "Plural-Forms: \n"
 
-#: src/components/Header/index.tsx:57
+#: src/components/Header/index.tsx:65
 msgid "Add USDC to your MetaMask wallet"
 msgstr ""
 
@@ -26,21 +26,12 @@ msgstr ""
 msgid "Buy"
 msgstr ""
 
-#: src/components/TransactionList.tsx:27
-msgid "Clear History"
-msgstr "기록 지우기"
-
-#: src/components/TransactionConfirmationModal/index.tsx:42
-msgid "Confirm this transaction in your wallet"
-msgstr ""
-
 #: src/components/WalletModal/index.tsx:311
 #: src/components/Web3Connect/index.tsx:40
 msgid "Connect to a wallet"
 msgstr "지갑에 연결"
 
 #: src/components/Header/More.tsx:17
-#: src/components/Menu.tsx:18
 msgid "Dev"
 msgstr "개발자"
 
@@ -49,30 +40,21 @@ msgid "Disconnect"
 msgstr ""
 
 #: src/components/Header/More.tsx:27
-#: src/components/Menu.tsx:28
 msgid "Discord"
 msgstr "디스코드"
 
-#: src/components/TransactionFailedModal.tsx:34
-msgid "Dismiss"
-msgstr "포기하기"
-
 #: src/components/Header/More.tsx:12
-#: src/components/Menu.tsx:13
 msgid "Docs"
 msgstr "문서"
 
 #: src/components/Header/More.tsx:18
-#: src/components/Menu.tsx:19
 msgid "Documentation for developers of FungyProof."
 msgstr ""
 
 #: src/components/Header/More.tsx:13
-#: src/components/Menu.tsx:14
 msgid "Documentation for users of FungyProof."
 msgstr ""
 
-#: src/components/TransactionConfirmationModal/index.tsx:121
 #: src/components/Web3Connect/index.tsx:28
 msgid "Error"
 msgstr "오류"
@@ -85,12 +67,11 @@ msgstr ""
 msgid "Error connecting. Try refreshing the page."
 msgstr ""
 
-#: src/components/Back.tsx:23
-msgid "Go Back"
+#: src/components/Header/More.tsx:23
+msgid "FungyProof is a supporter of Open Source."
 msgstr ""
 
 #: src/components/Header/More.tsx:28
-#: src/components/Menu.tsx:29
 msgid "Join the community on Discord."
 msgstr "Discord 커뮤니티에 가입하세요."
 
@@ -98,14 +79,9 @@ msgstr "Discord 커뮤니티에 가입하세요."
 msgid "Learn more about wallets"
 msgstr ""
 
-#: src/pages/profile.tsx:58
+#: src/pages/profile.tsx:56
 msgid "Loading"
 msgstr "로드 중"
-
-#: src/components/Header/More.tsx:23
-#: src/components/Menu.tsx:24
-msgid "FungyProof is a supporter of Open Source."
-msgstr ""
 
 #: src/components/Footer/index.tsx:21
 msgid "Matic Bridge"
@@ -120,39 +96,30 @@ msgid "Oops! An unknown error occurred. Please refresh the page, or visit from a
 msgstr "이런! 알 수 없는 오류가 발생했습니다. 페이지를 새로 고침하거나 다른 브라우저 또는 기기에서 방문하세요."
 
 #: src/components/Header/More.tsx:22
-#: src/components/Menu.tsx:23
 msgid "Open Source"
 msgstr "오픈 소스"
 
-#: src/components/Header/index.tsx:138
+#: src/components/Header/index.tsx:146
 msgid "Open main menu"
 msgstr "메인 메뉴 열기"
-
-#: src/components/Web3Status/index.tsx:120
-msgid "Pending"
-msgstr "보류 중"
 
 #: src/components/WalletModal/index.tsx:272
 msgid "Please connect to the appropriate Ethereum network."
 msgstr ""
 
 #: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:180
-#: src/pages/profile.tsx:40
+#: src/components/Header/index.tsx:188
+#: src/pages/profile.tsx:38
 msgid "Profile"
 msgstr ""
 
-#: src/components/TransactionConfirmationModal/index.tsx:73
-msgid "Transaction Submitted"
+#: src/components/Header/index.tsx:51
+msgid "Registry"
 msgstr ""
 
-#: src/pages/profile.tsx:75
+#: src/pages/profile.tsx:73
 msgid "View on explorer"
 msgstr "탐색기에서 보기"
-
-#: src/components/TransactionConfirmationModal/index.tsx:39
-msgid "Waiting for Confirmation"
-msgstr ""
 
 #: src/components/WalletModal/index.tsx:268
 msgid "Wrong Network"
@@ -161,17 +128,3 @@ msgstr "잘못된 네트워크"
 #: src/components/Web3Connect/index.tsx:28
 msgid "You are on the wrong network"
 msgstr "잘못된 네트워크에 있습니다."
-
-#: src/components/TransactionList.tsx:24
-msgid "Your Transaction History on {0}"
-msgstr "{0}의 거래 내역"
-
-#: src/components/Gas/index.tsx:14
-#: src/pages/profile.tsx:34
-msgid "failed to load"
-msgstr "로드하지 못함"
-
-#: src/components/Gas/index.tsx:15
-#: src/pages/profile.tsx:35
-msgid "loading..."
-msgstr "로드 중..."

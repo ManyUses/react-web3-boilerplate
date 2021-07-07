@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react'
 import { fortmatic, injected, lattice, portis, walletconnect, walletlink } from '../../connectors'
-import { isTransactionRecent, useAllTransactions } from '../../state/transactions/hooks'
+// import { isTransactionRecent, useAllTransactions } from '../../state/transactions/hooks'
 
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import Image from 'next/image'
 import Loader from '../Loader'
 import { NetworkContextName } from '../../constants'
-import { TransactionDetails } from '../../state/transactions/reducer'
+// import { TransactionDetails } from '../../state/transactions/reducer'
 import WalletModal from '../WalletModal'
 import Web3Connect from '../Web3Connect'
 import { shortenAddress } from '../../functions/format'
@@ -29,9 +29,9 @@ const IconWrapper = styled.div<{ size?: number }>`
 `
 
 // we want the latest one to come first, so return negative if a is after b
-function newTransactionsFirst(a: TransactionDetails, b: TransactionDetails) {
-  return b.addedTime - a.addedTime
-}
+// function newTransactionsFirst(a: TransactionDetails, b: TransactionDetails) {
+//   return b.addedTime - a.addedTime
+// }
 
 const SOCK = (
   <span role="img" aria-label="has socks emoji" style={{ marginTop: -4, marginBottom: -4 }}>
@@ -82,28 +82,26 @@ function Web3StatusInner() {
   const { i18n } = useLingui()
   const { account, connector } = useWeb3React()
 
-  const { ENSName } = useENSName(account ?? undefined)
+  // const { ENSName } = useENSName(account ?? undefined)
 
-  const allTransactions = useAllTransactions()
+  // const allTransactions = useAllTransactions()
 
-  const sortedRecentTransactions = useMemo(() => {
-    const txs = Object.values(allTransactions)
-    return txs.filter(isTransactionRecent).sort(newTransactionsFirst)
-  }, [allTransactions])
+  // const sortedRecentTransactions = useMemo(() => {
+  //   const txs = Object.values(allTransactions)
+  //   return txs.filter(isTransactionRecent).sort(newTransactionsFirst)
+  // }, [allTransactions])
 
-  const pending = sortedRecentTransactions
-    .filter((tx) => {
-      if (tx.receipt) {
-        return false
-      } else if (tx.archer && tx.archer.deadline * 1000 - Date.now() < 0) {
-        return false
-      } else {
-        return true
-      }
-    })
-    .map((tx) => tx.hash)
+  // const pending = sortedRecentTransactions
+  //   .filter((tx) => {
+  //     if (tx.receipt) {
+  //       return false
+  //     } else {
+  //       return true
+  //     }
+  //   })
+  //   .map((tx) => tx.hash)
 
-  const hasPendingTransactions = !!pending.length
+  // const hasPendingTransactions = !!pending.length
 
   const toggleWalletModal = useWalletModalToggle()
 
@@ -114,7 +112,7 @@ function Web3StatusInner() {
         className="flex items-center px-3 py-2 text-sm rounded-lg text-secondary"
         onClick={toggleWalletModal}
       >
-        {hasPendingTransactions ? (
+        {/* {hasPendingTransactions ? (
           <div className="flex items-center justify-between">
             <div className="pr-2">
               {pending?.length} {i18n._(t`Pending`)}
@@ -123,8 +121,9 @@ function Web3StatusInner() {
           </div>
         ) : (
           <div className="mr-2">{ENSName || shortenAddress(account)}</div>
-        )}
-        {!hasPendingTransactions && connector && <StatusIcon connector={connector} />}
+        )} */}
+        {/* {!hasPendingTransactions && connector && <StatusIcon connector={connector} />} */}
+        {connector && <StatusIcon connector={connector} />}
       </div>
     )
   } else {
@@ -138,15 +137,15 @@ export default function Web3Status() {
 
   const { ENSName } = useENSName(account ?? undefined)
 
-  const allTransactions = useAllTransactions()
+  // const allTransactions = useAllTransactions()
 
-  const sortedRecentTransactions = useMemo(() => {
-    const txs = Object.values(allTransactions)
-    return txs.filter(isTransactionRecent).sort(newTransactionsFirst)
-  }, [allTransactions])
+  // const sortedRecentTransactions = useMemo(() => {
+  //   const txs = Object.values(allTransactions)
+  //   return txs.filter(isTransactionRecent).sort(newTransactionsFirst)
+  // }, [allTransactions])
 
-  const pending = sortedRecentTransactions.filter((tx) => !tx.receipt).map((tx) => tx.hash)
-  const confirmed = sortedRecentTransactions.filter((tx) => tx.receipt).map((tx) => tx.hash)
+  // const pending = sortedRecentTransactions.filter((tx) => !tx.receipt).map((tx) => tx.hash)
+  // const confirmed = sortedRecentTransactions.filter((tx) => tx.receipt).map((tx) => tx.hash)
 
   if (!contextNetwork.active && !active) {
     return null
@@ -155,7 +154,8 @@ export default function Web3Status() {
   return (
     <>
       <Web3StatusInner />
-      <WalletModal ENSName={ENSName ?? undefined} pendingTransactions={pending} confirmedTransactions={confirmed} />
+      {/* <WalletModal ENSName={ENSName ?? undefined} pendingTransactions={pending} confirmedTransactions={confirmed} /> */}
+      <WalletModal ENSName={ENSName ?? undefined} />
     </>
   )
 }

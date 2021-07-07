@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import { fortmatic, injected, portis, torus, walletconnect, walletlink } from '../../connectors'
 import styled, { ThemeContext } from 'styled-components'
 
@@ -11,12 +11,13 @@ import Image from 'next/image'
 import { ExternalLink as LinkIcon } from 'react-feather'
 import ModalHeader from '../ModalHeader'
 import { SUPPORTED_WALLETS } from '../../constants'
-import Transaction from './Transaction'
-import { clearAllTransactions } from '../../state/transactions/actions'
 import { getExplorerLink } from '../../functions/explorer'
 import { shortenAddress } from '../../functions/format'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useDispatch } from 'react-redux'
+
+// import Transaction from './Transaction'
+// import { clearAllTransactions } from '../../state/transactions/actions'
 
 const AddressLink = styled(ExternalLink)<{ hasENS: boolean; isENS: boolean }>`
   font-size: 0.825rem;
@@ -51,32 +52,32 @@ const IconWrapper = styled.div<{ size?: number }>`
   `};
 `
 
-const TransactionListWrapper = styled.div`
-  ${({ theme }) => theme.flexColumnNoWrap};
-`
+// const TransactionListWrapper = styled.div`
+//   ${({ theme }) => theme.flexColumnNoWrap};
+// `
 
-function renderTransactions(transactions: string[]) {
-  return (
-    <TransactionListWrapper>
-      {transactions.map((hash, i) => {
-        return <Transaction key={i} hash={hash} />
-      })}
-    </TransactionListWrapper>
-  )
-}
+// function renderTransactions(transactions: string[]) {
+//   return (
+//     <TransactionListWrapper>
+//       {transactions.map((hash, i) => {
+//         return <Transaction key={i} hash={hash} />
+//       })}
+//     </TransactionListWrapper>
+//   )
+// }
 
 interface AccountDetailsProps {
   toggleWalletModal: () => void
-  pendingTransactions: string[]
-  confirmedTransactions: string[]
+  // pendingTransactions: string[]
+  // confirmedTransactions: string[]
   ENSName?: string
   openOptions: () => void
 }
 
 export default function AccountDetails({
   toggleWalletModal,
-  pendingTransactions,
-  confirmedTransactions,
+  // pendingTransactions,
+  // confirmedTransactions,
   ENSName,
   openOptions,
 }: AccountDetailsProps): any {
@@ -146,9 +147,9 @@ export default function AccountDetails({
     return null
   }
 
-  const clearAllTransactionsCallback = useCallback(() => {
-    if (chainId) dispatch(clearAllTransactions({ chainId }))
-  }, [dispatch, chainId])
+  // const clearAllTransactionsCallback = useCallback(() => {
+  //   if (chainId) dispatch(clearAllTransactions({ chainId }))
+  // }, [dispatch, chainId])
 
   return (
     <div className="space-y-3">
@@ -237,7 +238,7 @@ export default function AccountDetails({
           </div>
         </div>
       </div>
-      {!!pendingTransactions.length || !!confirmedTransactions.length ? (
+      {/* {!!pendingTransactions.length || !!confirmedTransactions.length ? (
         <div>
           <div className="grid grid-flow-row">
             <div>Recent Transactions</div>
@@ -248,7 +249,7 @@ export default function AccountDetails({
         </div>
       ) : (
         <div>Your transactions will appear here...</div>
-      )}
+      )} */}
     </div>
   )
 }

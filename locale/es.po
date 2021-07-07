@@ -13,7 +13,7 @@ msgstr ""
 "POT-Creation-Date: \n"
 "Plural-Forms: \n"
 
-#: src/components/Header/index.tsx:57
+#: src/components/Header/index.tsx:65
 msgid "Add USDC to your MetaMask wallet"
 msgstr ""
 
@@ -26,21 +26,12 @@ msgstr ""
 msgid "Buy"
 msgstr ""
 
-#: src/components/TransactionList.tsx:27
-msgid "Clear History"
-msgstr "Borrar historial"
-
-#: src/components/TransactionConfirmationModal/index.tsx:42
-msgid "Confirm this transaction in your wallet"
-msgstr ""
-
 #: src/components/WalletModal/index.tsx:311
 #: src/components/Web3Connect/index.tsx:40
 msgid "Connect to a wallet"
 msgstr "Conectar con una cartera"
 
 #: src/components/Header/More.tsx:17
-#: src/components/Menu.tsx:18
 msgid "Dev"
 msgstr "Dev"
 
@@ -49,30 +40,21 @@ msgid "Disconnect"
 msgstr ""
 
 #: src/components/Header/More.tsx:27
-#: src/components/Menu.tsx:28
 msgid "Discord"
 msgstr "Discord"
 
-#: src/components/TransactionFailedModal.tsx:34
-msgid "Dismiss"
-msgstr "Descartar"
-
 #: src/components/Header/More.tsx:12
-#: src/components/Menu.tsx:13
 msgid "Docs"
 msgstr "Docs"
 
 #: src/components/Header/More.tsx:18
-#: src/components/Menu.tsx:19
 msgid "Documentation for developers of FungyProof."
 msgstr ""
 
 #: src/components/Header/More.tsx:13
-#: src/components/Menu.tsx:14
 msgid "Documentation for users of FungyProof."
 msgstr ""
 
-#: src/components/TransactionConfirmationModal/index.tsx:121
 #: src/components/Web3Connect/index.tsx:28
 msgid "Error"
 msgstr "Error"
@@ -85,12 +67,11 @@ msgstr ""
 msgid "Error connecting. Try refreshing the page."
 msgstr ""
 
-#: src/components/Back.tsx:23
-msgid "Go Back"
+#: src/components/Header/More.tsx:23
+msgid "FungyProof is a supporter of Open Source."
 msgstr ""
 
 #: src/components/Header/More.tsx:28
-#: src/components/Menu.tsx:29
 msgid "Join the community on Discord."
 msgstr "Únase a la comunidad en Discord."
 
@@ -98,14 +79,9 @@ msgstr "Únase a la comunidad en Discord."
 msgid "Learn more about wallets"
 msgstr ""
 
-#: src/pages/profile.tsx:58
+#: src/pages/profile.tsx:56
 msgid "Loading"
 msgstr "Cargando"
-
-#: src/components/Header/More.tsx:23
-#: src/components/Menu.tsx:24
-msgid "FungyProof is a supporter of Open Source."
-msgstr ""
 
 #: src/components/Footer/index.tsx:21
 msgid "Matic Bridge"
@@ -120,39 +96,30 @@ msgid "Oops! An unknown error occurred. Please refresh the page, or visit from a
 msgstr "¡Vaya! Se ha producido un error desconocido. Actualice la página o visítela desde otro navegador o dispositivo."
 
 #: src/components/Header/More.tsx:22
-#: src/components/Menu.tsx:23
 msgid "Open Source"
 msgstr "Código abierto"
 
-#: src/components/Header/index.tsx:138
+#: src/components/Header/index.tsx:146
 msgid "Open main menu"
 msgstr "Abrir menú principal"
-
-#: src/components/Web3Status/index.tsx:120
-msgid "Pending"
-msgstr "Pendiente"
 
 #: src/components/WalletModal/index.tsx:272
 msgid "Please connect to the appropriate Ethereum network."
 msgstr ""
 
 #: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:180
-#: src/pages/profile.tsx:40
+#: src/components/Header/index.tsx:188
+#: src/pages/profile.tsx:38
 msgid "Profile"
 msgstr ""
 
-#: src/components/TransactionConfirmationModal/index.tsx:73
-msgid "Transaction Submitted"
+#: src/components/Header/index.tsx:51
+msgid "Registry"
 msgstr ""
 
-#: src/pages/profile.tsx:75
+#: src/pages/profile.tsx:73
 msgid "View on explorer"
 msgstr "Ver en el explorador"
-
-#: src/components/TransactionConfirmationModal/index.tsx:39
-msgid "Waiting for Confirmation"
-msgstr ""
 
 #: src/components/WalletModal/index.tsx:268
 msgid "Wrong Network"
@@ -161,17 +128,3 @@ msgstr "Red incorrecta"
 #: src/components/Web3Connect/index.tsx:28
 msgid "You are on the wrong network"
 msgstr "Está en la red equivocada"
-
-#: src/components/TransactionList.tsx:24
-msgid "Your Transaction History on {0}"
-msgstr "Su historial de transacciones en {0}"
-
-#: src/components/Gas/index.tsx:14
-#: src/pages/profile.tsx:34
-msgid "failed to load"
-msgstr "se ha producido un error en la carga"
-
-#: src/components/Gas/index.tsx:15
-#: src/pages/profile.tsx:35
-msgid "loading..."
-msgstr "cargando..."
