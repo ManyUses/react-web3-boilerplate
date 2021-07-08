@@ -13,11 +13,11 @@ msgstr ""
 "POT-Creation-Date: \n"
 "Plural-Forms: \n"
 
-#: src/components/Header/index.tsx:70
+#: src/components/Header/index.tsx:66
 msgid "Add USDC to your MetaMask wallet"
 msgstr "Add USDC to your MetaMask wallet"
 
-#: src/components/WalletModal/index.tsx:306
+#: src/components/WalletModal/index.tsx:311
 msgid "Back"
 msgstr "Back"
 
@@ -26,7 +26,7 @@ msgstr "Back"
 msgid "Buy"
 msgstr "Buy"
 
-#: src/components/WalletModal/index.tsx:311
+#: src/components/WalletModal/index.tsx:316
 #: src/components/Web3Connect/index.tsx:40
 msgid "Connect to a wallet"
 msgstr "Connect to a wallet"
@@ -35,7 +35,7 @@ msgstr "Connect to a wallet"
 msgid "Dev"
 msgstr "Dev"
 
-#: src/components/WalletModal/index.tsx:278
+#: src/components/WalletModal/index.tsx:282
 msgid "Disconnect"
 msgstr "Disconnect"
 
@@ -59,11 +59,11 @@ msgstr "Documentation for users of FungyProof."
 msgid "Error"
 msgstr "Error"
 
-#: src/components/WalletModal/index.tsx:268
+#: src/components/WalletModal/index.tsx:272
 msgid "Error connecting"
 msgstr "Error connecting"
 
-#: src/components/WalletModal/index.tsx:274
+#: src/components/WalletModal/index.tsx:278
 msgid "Error connecting. Try refreshing the page."
 msgstr "Error connecting. Try refreshing the page."
 
@@ -75,7 +75,7 @@ msgstr "FungyProof is a supporter of Open Source."
 msgid "Join the community on Discord."
 msgstr "Join the community on Discord."
 
-#: src/components/WalletModal/index.tsx:328
+#: src/components/WalletModal/index.tsx:334
 msgid "Learn more about wallets"
 msgstr "Learn more about wallets"
 
@@ -87,7 +87,7 @@ msgstr "Loading"
 msgid "Matic Bridge"
 msgstr "Matic Bridge"
 
-#: src/components/WalletModal/index.tsx:327
+#: src/components/WalletModal/index.tsx:332
 msgid "New to Ethereum?"
 msgstr "New to Ethereum?"
 
@@ -99,29 +99,30 @@ msgstr "Oops! An unknown error occurred. Please refresh the page, or visit from 
 msgid "Open Source"
 msgstr "Open Source"
 
-#: src/components/Header/index.tsx:151
+#: src/components/Header/index.tsx:140
 msgid "Open main menu"
 msgstr "Open main menu"
 
-#: src/components/WalletModal/index.tsx:272
+#: src/components/WalletModal/index.tsx:276
 msgid "Please connect to the appropriate Ethereum network."
 msgstr "Please connect to the appropriate Ethereum network."
 
-#: src/components/Header/index.tsx:48
-#: src/components/Header/index.tsx:193
+#: src/components/Header/index.tsx:44
+#: src/components/Header/index.tsx:179
 #: src/pages/profile.tsx:39
 msgid "Profile"
 msgstr "Profile"
 
-#: src/components/Header/index.tsx:56
+#: src/components/Header/index.tsx:52
+#: src/components/Header/index.tsx:187
 msgid "Registry"
 msgstr "Registry"
 
-#: src/pages/profile.tsx:74
+#: src/pages/profile.tsx:75
 msgid "View on explorer"
 msgstr "View on explorer"
 
-#: src/components/WalletModal/index.tsx:268
+#: src/components/WalletModal/index.tsx:272
 msgid "Wrong Network"
 msgstr "Wrong Network"
 

@@ -1,23 +1,29 @@
 import React, { useContext } from 'react'
-import { fortmatic, injected, portis, torus, walletconnect, walletlink } from '../../connectors'
+import { NATIVE, Ether } from '@sushiswap/sdk'
 import styled, { ThemeContext } from 'styled-components'
-
-import { AppDispatch } from '../../state'
-import Button from '../Button'
-import Copy from './Copy'
-import ExternalLink from '../ExternalLink'
-import Identicon from '../Identicon'
+import { useDispatch } from 'react-redux'
+import { ExternalLink as LinkIcon, User as UserIcon } from 'react-feather'
 import Image from 'next/image'
-import { ExternalLink as LinkIcon } from 'react-feather'
-import ModalHeader from '../ModalHeader'
+
 import { SUPPORTED_WALLETS } from '../../constants'
 import { getExplorerLink } from '../../functions/explorer'
 import { shortenAddress } from '../../functions/format'
+import { fortmatic, injected, portis, torus, walletconnect, walletlink } from '../../connectors'
+import { AppDispatch } from '../../state'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
-import { useDispatch } from 'react-redux'
+import { useETHBalances } from '../../state/wallet/hooks'
+
+import Button from '../Button'
+import Copy from './Copy'
+import ExternalLink from '../ExternalLink'
+import ModalHeader from '../ModalHeader'
 
 // import Transaction from './Transaction'
 // import { clearAllTransactions } from '../../state/transactions/actions'
+
+// Add localhost
+const N = NATIVE
+N[1337] = Ether
 
 const AddressLink = styled(ExternalLink)<{ hasENS: boolean; isENS: boolean }>`
   font-size: 0.825rem;
@@ -82,6 +88,8 @@ export default function AccountDetails({
   openOptions,
 }: AccountDetailsProps): any {
   const { chainId, account, connector } = useActiveWeb3React()
+  const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
+
   const theme = useContext(ThemeContext)
   const dispatch = useDispatch<AppDispatch>()
 
@@ -99,11 +107,7 @@ export default function AccountDetails({
 
   function getStatusIcon() {
     if (connector === injected) {
-      return (
-        <IconWrapper size={16}>
-          <Identicon />
-        </IconWrapper>
-      )
+      return <UserIcon />
     } else if (connector === walletconnect) {
       return (
         <IconWrapper size={16}>
@@ -194,6 +198,11 @@ export default function AccountDetails({
                 <p> {account && shortenAddress(account)}</p>
               </>
             )}
+            {account && chainId && userEthBalance && (
+              <span className="ml-4">
+                {userEthBalance?.toSignificant(4)} {N[chainId].symbol || 'ETH'}
+              </span>
+            )}
           </div>
           <div>
             {ENSName ? (
@@ -206,8 +215,8 @@ export default function AccountDetails({
                   )}
                   {chainId && account && (
                     <AddressLink
-                      // hasENS={!!ENSName}
-                      // isENS={true}
+                      hasENS={!!ENSName}
+                      isENS={true}
                       href={chainId && getExplorerLink(chainId, ENSName, 'address')}
                     >
                       <LinkIcon size={16} />

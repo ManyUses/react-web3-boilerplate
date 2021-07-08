@@ -39,7 +39,7 @@ export default function Buy() {
     <a
       id={`buy-link`}
       onClick={onClick}
-      className="p-2 cursor-pointer text-baseline text-primary border border-black focus:border-black  rounded-md md:p-3 whitespace-nowrap"
+      className="p-2 cursor-pointer text-baseline rounded-md md:p-3 whitespace-nowrap text-white bg-black"
     >
       {i18n._(t`Buy`)}
     </a>

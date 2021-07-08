@@ -85,21 +85,18 @@ function LanguageSwitch() {
   return (
     <StyledMenu ref={node}>
       <div
-        className="cursor-pointer flex items-center justify-center border-2 rounded hover:border-dark-700 h-[40px] w-[40px]"
+        className="cursor-pointer flex items-center justify-center rounded border border-transparent hover:border-black h-[40px] w-[40px]"
         onClick={toggle}
       >
         <Image src={LANGUAGES[locale].flag} alt={LANGUAGES[locale].language} width={22} height={22} />
       </div>
       {open && (
-        <div className="min-w-[10rem] max-h-[232px] md:max-h-[unset] absolute flex flex-col z-50 md:top-[3rem] right-0 md:overflow-hidden overflow-scroll top-[-15.5rem] rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+        <div className="min-w-[10rem] max-h-[232px] md:max-h-[unset] absolute flex flex-col z-50 md:top-[4.2rem] right-0 md:overflow-hidden overflow-scroll top-[-15.5rem] rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
           {locales.map((key) => {
             const { flag, language, dialect } = LANGUAGES[key]
             return (
               <Link href={pathname} locale={key} key={key}>
-                <a
-                  className="cursor-pointer flex items-center px-3 py-1.5 hover:text-gray-400 font-bold"
-                  onClick={toggle}
-                >
+                <a className="cursor-pointer flex items-center px-3 py-1.5 hover:text-gray-400" onClick={toggle}>
                   <Image
                     className="inline w-3 h-3 mr-1 align-middle"
                     src={flag}

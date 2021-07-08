@@ -1,21 +1,22 @@
 import React, { useMemo } from 'react'
-import { fortmatic, injected, lattice, portis, walletconnect, walletlink } from '../../connectors'
-// import { isTransactionRecent, useAllTransactions } from '../../state/transactions/hooks'
 
+// import { isTransactionRecent, useAllTransactions } from '../../state/transactions/hooks'
+import { useWeb3React } from '@web3-react/core'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import Image from 'next/image'
-import Loader from '../Loader'
+import { useLingui } from '@lingui/react'
+import styled from 'styled-components'
+import { t } from '@lingui/macro'
+
+import { fortmatic, injected, lattice, portis, walletconnect, walletlink } from '../../connectors'
 import { NetworkContextName } from '../../constants'
 // import { TransactionDetails } from '../../state/transactions/reducer'
 import WalletModal from '../WalletModal'
 import Web3Connect from '../Web3Connect'
 import { shortenAddress } from '../../functions/format'
-import styled from 'styled-components'
-import { t } from '@lingui/macro'
 import useENSName from '../../hooks/useENSName'
-import { useLingui } from '@lingui/react'
 import { useWalletModalToggle } from '../../state/application/hooks'
-import { useWeb3React } from '@web3-react/core'
+import Loader from '../Loader'
 
 const IconWrapper = styled.div<{ size?: number }>`
   display: flex;
@@ -33,17 +34,10 @@ const IconWrapper = styled.div<{ size?: number }>`
 //   return b.addedTime - a.addedTime
 // }
 
-const SOCK = (
-  <span role="img" aria-label="has socks emoji" style={{ marginTop: -4, marginBottom: -4 }}>
-    🧦
-  </span>
-)
-
 // eslint-disable-next-line react/prop-types
 function StatusIcon({ connector }: { connector: AbstractConnector }) {
   if (connector === injected) {
-    return <Image src="/user.svg" alt="Injected (MetaMask etc...)" width={20} height={20} />
-    // return <Identicon />
+    return <Image src="/images/wallets/metamask.png" alt="Injected (MetaMask etc...)" width={20} height={20} />
   } else if (connector === walletconnect) {
     return (
       <IconWrapper size={16}>
@@ -82,7 +76,7 @@ function Web3StatusInner() {
   const { i18n } = useLingui()
   const { account, connector } = useWeb3React()
 
-  // const { ENSName } = useENSName(account ?? undefined)
+  const { ENSName } = useENSName(account ?? undefined)
 
   // const allTransactions = useAllTransactions()
 
@@ -119,9 +113,10 @@ function Web3StatusInner() {
             </div>{' '}
             <Loader stroke="white" />
           </div>
-        ) : (
-          <div className="mr-2">{ENSName || shortenAddress(account)}</div>
-        )} */}
+        ) : ( */}
+        <div className="mr-2">{ENSName || shortenAddress(account)}</div>
+
+        {/* )} */}
         {/* {!hasPendingTransactions && connector && <StatusIcon connector={connector} />} */}
         {connector && <StatusIcon connector={connector} />}
       </div>

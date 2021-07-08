@@ -17,6 +17,8 @@ export default function Dashboard() {
   const [addr, id] = ownerNFT?.result ? ownerNFT?.result?.[0] : []
   const uri = tokenURI?.result ? tokenURI?.result?.[0] : []
 
+  // TODO test performing a transaction
+
   // useEffect(() => {
   //   if (nft) return
   //   const token = new EvmNft({

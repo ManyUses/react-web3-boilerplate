@@ -3,7 +3,7 @@ import React, { Children } from 'react'
 
 import { useRouter } from 'next/router'
 
-const NavLink = ({ children, activeClassName = 'text-high-emphesis', ...props }) => {
+const NavLink = ({ children, activeClassName = 'border-black', ...props }) => {
   const { asPath } = useRouter()
   const child = Children.only(children)
   const childClassName = child.props.className || ''

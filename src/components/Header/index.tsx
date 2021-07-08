@@ -13,7 +13,6 @@ import Web3Network from '../Web3Network'
 import Web3Status from '../Web3Status'
 import { t } from '@lingui/macro'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
-import { useETHBalances } from '../../state/wallet/hooks'
 import { useLingui } from '@lingui/react'
 
 // Add localhost
@@ -24,9 +23,6 @@ function AppBar(): JSX.Element {
   const { i18n } = useLingui()
   const { account, chainId, library } = useActiveWeb3React()
 
-  const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  // console.log(account, userEthBalance)
-
   return (
     //     // <header className="flex flex-row justify-between w-screen flex-nowrap">
     <header className="flex-shrink-0 w-full">
@@ -34,8 +30,8 @@ function AppBar(): JSX.Element {
         {({ open }) => (
           <>
             <div className="px-4 py-4">
-              <div className="flex items-center justify-between uppercase">
-                <div className="flex items-center">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center uppercase">
                   <Image src="/logo.jpg" alt="FungyProof" width="32px" height="32px" />
                   <div className="hidden sm:block sm:ml-4">
                     <div className="flex space-x-2">
@@ -43,7 +39,7 @@ function AppBar(): JSX.Element {
                       <NavLink href="/profile">
                         <a
                           id={`profile-nav-link`}
-                          className="p-2 text-baseline text-primary rounded-md border border-transparent hover:border-black active:border-black focus:border-black md:p-3 whitespace-nowrap"
+                          className="p-2 text-baseline text-primary rounded-md border hover:border-black md:p-3 whitespace-nowrap"
                         >
                           {i18n._(t`Profile`)}
                         </a>
@@ -51,7 +47,7 @@ function AppBar(): JSX.Element {
                       <NavLink href="/registry">
                         <a
                           id={`Registry-nav-link`}
-                          className="p-2 text-baseline text-primary rounded-md border border-transparent hover:border-black active:border-black focus:border-black md:p-3 whitespace-nowrap"
+                          className="p-2 text-baseline text-primary rounded-md border hover:border-black md:p-3 whitespace-nowrap"
                         >
                           {i18n._(t`Registry`)}
                         </a>
@@ -69,7 +65,7 @@ function AppBar(): JSX.Element {
                         <>
                           <QuestionHelper text={i18n._(t`Add USDC to your MetaMask wallet`)}>
                             <div
-                              className="hidden rounded-md cursor-pointer sm:inline-flex bg-dark-900 hover:bg-dark-800 p-0.5"
+                              className="hidden rounded-md cursor-pointer sm:inline-flex p-0.5"
                               onClick={() => {
                                 let address: string | undefined
                                 switch (chainId) {
@@ -124,19 +120,12 @@ function AppBar(): JSX.Element {
                       )}
 
                     {library && library.provider.isMetaMask && (
-                      <div className="hidden sm:inline-block">
+                      <div className="hidden sm:inline-block rounded border border-transparent hover:border-black">
                         <Web3Network />
                       </div>
                     )}
 
-                    <div className="w-auto flex items-center rounded p-0.5 whitespace-nowrap text-md cursor-pointer select-none pointer-events-auto">
-                      {account && chainId && userEthBalance && (
-                        <>
-                          <div className="px-3 py-2 text-primary text-bold">
-                            {userEthBalance?.toSignificant(4)} {N[chainId].symbol || 'ETH'}
-                          </div>
-                        </>
-                      )}
+                    <div className="w-auto flex items-center rounded p-0.5 whitespace-nowrap text-md cursor-pointer select-none pointer-events-auto border border-transparent hover:border-black">
                       <Web3Status />
                     </div>
                     <div className="hidden md:block">
@@ -186,13 +175,18 @@ function AppBar(): JSX.Element {
             <Popover.Panel className="sm:hidden">
               <div className="flex flex-col px-4 pt-2 pb-3 space-y-1">
                 <Link href={'/profile'}>
-                  <a
-                    id={`profile-nav-link`}
-                    className="p-2 text-baseline text-primary border border-transparent hover:border-black focus:border-black active:border-black md:p-3 whitespace-nowrap"
-                  >
+                  <a id={`profile-nav-link`} className="p-2 text-baseline text-primary md:p-3 whitespace-nowrap">
                     {i18n._(t`Profile`)}
                   </a>
                 </Link>
+                <NavLink href="/registry">
+                  <a
+                    id={`Registry-nav-link`}
+                    className="p-2 text-baseline text-primary rounded-md md:p-3 whitespace-nowrap"
+                  >
+                    {i18n._(t`Registry`)}
+                  </a>
+                </NavLink>
               </div>
             </Popover.Panel>
           </>

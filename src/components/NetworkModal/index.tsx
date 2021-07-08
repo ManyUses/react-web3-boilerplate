@@ -154,14 +154,14 @@ export default function NetworkModal(): JSX.Element | null {
   if (!chainId) return null
 
   return (
-    <Modal isOpen={networkModalOpen} onDismiss={toggleNetworkModal} maxWidth={768}>
+    <Modal isOpen={networkModalOpen} onDismiss={toggleNetworkModal}>
       <ModalHeader onClose={toggleNetworkModal} title="Select a Network" />
       <div className="mb-6 text-lg text-primary">
         You are currently browsing <span className="font-bold text-black">FungyProof</span>
         <br /> on the <span className="font-bold text-blue">{NETWORK_LABEL[chainId]}</span> network
       </div>
 
-      <div className="grid grid-flow-row-dense grid-cols-1 gap-5 overflow-y-auto md:grid-cols-2">
+      <div className="overflow-y-auto space-y-2">
         {[
           ChainId.MAINNET,
           ChainId.MATIC,

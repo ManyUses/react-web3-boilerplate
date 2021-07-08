@@ -1,28 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
-import { fortmatic, injected, portis } from '../../connectors'
-import { useModalOpen, useWalletModalToggle } from '../../state/application/hooks'
-
-import { AbstractConnector } from '@web3-react/abstract-connector'
-import AccountDetails from '../AccountDetails'
-import { ApplicationModal } from '../../state/application/actions'
-import { ButtonError } from '../Button'
-import ExternalLink from '../ExternalLink'
-import Image from 'next/image'
-import Modal from '../Modal'
-import ModalHeader from '../ModalHeader'
-import { OVERLAY_READY } from '../../connectors/Fortmatic'
-import Option from './Option'
-import PendingView from './PendingView'
-import ReactGA from 'react-ga'
-import { SUPPORTED_WALLETS } from '../../constants'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { XIcon } from '@heroicons/react/outline'
 import { isMobile } from 'react-device-detect'
 import styled from 'styled-components'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
+import { AbstractConnector } from '@web3-react/abstract-connector'
+import Image from 'next/image'
+import ReactGA from 'react-ga'
+
+import { SUPPORTED_WALLETS } from '../../constants'
+import { fortmatic, injected, portis } from '../../connectors'
+import { OVERLAY_READY } from '../../connectors/Fortmatic'
+import { useModalOpen, useWalletModalToggle } from '../../state/application/hooks'
+import { ApplicationModal } from '../../state/application/actions'
 import usePrevious from '../../hooks/usePrevious'
+import { useETHBalances } from '../../state/wallet/hooks'
+
+import AccountDetails from '../AccountDetails'
+import { ButtonError } from '../Button'
+import ExternalLink from '../ExternalLink'
+import Modal from '../Modal'
+import ModalHeader from '../ModalHeader'
+import Option from './Option'
+import PendingView from './PendingView'
 
 const CloseIcon = styled.div`
   position: absolute;
@@ -106,6 +108,8 @@ export default function WalletModal({
   const toggleWalletModal = useWalletModalToggle()
 
   const previousAccount = usePrevious(account)
+
+  const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
   // close on connection, when logged out before
   useEffect(() => {
@@ -298,6 +302,7 @@ export default function WalletModal({
         {walletView !== WALLET_VIEWS.ACCOUNT ? (
           <HeaderRow>
             <HoverText
+              className="font-bold hover:text-gray-400"
               onClick={() => {
                 setPendingError(false)
                 setWalletView(WALLET_VIEWS.ACCOUNT)
@@ -320,12 +325,14 @@ export default function WalletModal({
               tryActivation={tryActivation}
             />
           ) : (
-            <div className="flex flex-col space-y-5 overflow-y-auto">{getOptions()}</div>
+            <div className="flex flex-col space-y-2 overflow-y-auto">{getOptions()}</div>
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
             <div className="flex flex-col mt-8 text-center">
               <div>{i18n._(t`New to Ethereum?`)}</div>
-              <ExternalLink href="https://ethereum.org/wallets/">{i18n._(t`Learn more about wallets`)}</ExternalLink>
+              <ExternalLink href="https://ethereum.org/wallets/" className="font-bold">
+                {i18n._(t`Learn more about wallets`)}
+              </ExternalLink>
             </div>
           )}
         </div>

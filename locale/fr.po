@@ -13,11 +13,11 @@ msgstr ""
 "POT-Creation-Date: \n"
 "Plural-Forms: \n"
 
-#: src/components/Header/index.tsx:70
+#: src/components/Header/index.tsx:66
 msgid "Add USDC to your MetaMask wallet"
 msgstr ""
 
-#: src/components/WalletModal/index.tsx:306
+#: src/components/WalletModal/index.tsx:311
 msgid "Back"
 msgstr ""
 
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Buy"
 msgstr ""
 
-#: src/components/WalletModal/index.tsx:311
+#: src/components/WalletModal/index.tsx:316
 #: src/components/Web3Connect/index.tsx:40
 msgid "Connect to a wallet"
 msgstr "Connecter un portefeuille"
@@ -35,7 +35,7 @@ msgstr "Connecter un portefeuille"
 msgid "Dev"
 msgstr "Dev"
 
-#: src/components/WalletModal/index.tsx:278
+#: src/components/WalletModal/index.tsx:282
 msgid "Disconnect"
 msgstr ""
 
@@ -59,11 +59,11 @@ msgstr ""
 msgid "Error"
 msgstr "Erreur"
 
-#: src/components/WalletModal/index.tsx:268
+#: src/components/WalletModal/index.tsx:272
 msgid "Error connecting"
 msgstr ""
 
-#: src/components/WalletModal/index.tsx:274
+#: src/components/WalletModal/index.tsx:278
 msgid "Error connecting. Try refreshing the page."
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Join the community on Discord."
 msgstr "Rejoignez la communauté sur Discord."
 
-#: src/components/WalletModal/index.tsx:328
+#: src/components/WalletModal/index.tsx:334
 msgid "Learn more about wallets"
 msgstr ""
 
@@ -87,7 +87,7 @@ msgstr "Chargement"
 msgid "Matic Bridge"
 msgstr ""
 
-#: src/components/WalletModal/index.tsx:327
+#: src/components/WalletModal/index.tsx:332
 msgid "New to Ethereum?"
 msgstr ""
 
@@ -99,29 +99,30 @@ msgstr "Oops! Une erreur inconnue est survenue. Veuillez actualiser la page ou l
 msgid "Open Source"
 msgstr "Open source"
 
-#: src/components/Header/index.tsx:151
+#: src/components/Header/index.tsx:140
 msgid "Open main menu"
 msgstr "Ouvrir le menu principal"
 
-#: src/components/WalletModal/index.tsx:272
+#: src/components/WalletModal/index.tsx:276
 msgid "Please connect to the appropriate Ethereum network."
 msgstr ""
 
-#: src/components/Header/index.tsx:48
-#: src/components/Header/index.tsx:193
+#: src/components/Header/index.tsx:44
+#: src/components/Header/index.tsx:179
 #: src/pages/profile.tsx:39
 msgid "Profile"
 msgstr ""
 
-#: src/components/Header/index.tsx:56
+#: src/components/Header/index.tsx:52
+#: src/components/Header/index.tsx:187
 msgid "Registry"
 msgstr ""
 
-#: src/pages/profile.tsx:74
+#: src/pages/profile.tsx:75
 msgid "View on explorer"
 msgstr "Voir sur l'explorateur"
 
-#: src/components/WalletModal/index.tsx:268
+#: src/components/WalletModal/index.tsx:272
 msgid "Wrong Network"
 msgstr "Mauvais réseau"
 
