@@ -12,8 +12,8 @@ import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { useETHBalances } from '../state/wallet/hooks'
 import { useLingui } from '@lingui/react'
 
-import Lottie from 'lottie-react'
-import anim from '../animation/wallet.json'
+// import Lottie from 'lottie-react'
+// import anim from '../animation/network-switcher.json'
 
 function Transactions() {
   const { i18n } = useLingui()
@@ -21,7 +21,7 @@ function Transactions() {
   const { account, chainId } = useActiveWeb3React()
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
-  // TODO get FP enrichment transactions
+  // TODO get ManyUses enrichment transactions
   // const { data, error }: SWRResponse<any, Error> = useSWR(
   //   `https://api.covalenthq.com/v1/${chainId}/address/${account}/stacks/sushiswap/acts/?&key=ckey_cba3674f2ce5450f9d5dd290589&swaps=true&quote-currency=usd`,
   //   (url) =>
@@ -29,13 +29,14 @@ function Transactions() {
   //       .then((r) => r.json())
   //       .then((j) => j.data)
   // )
+
   // if (error) return <div>{i18n._(t`failed to load`)}</div>
   // if (!data) return <div>{i18n._(t`loading...`)}</div>
 
   return (
     <>
       <Head>
-        <title>{i18n._(t`Profile`)} | FungyProof</title>
+        <title>{i18n._(t`Profile`)} | ManyUses</title>
         <meta name="description" content="Proile..." />
       </Head>
 

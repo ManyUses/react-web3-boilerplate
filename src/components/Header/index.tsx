@@ -1,4 +1,4 @@
-import { ChainId, NATIVE } from '@sushiswap/sdk'
+import { ChainId, NATIVE, Ether } from '@sushiswap/sdk'
 import React from 'react'
 
 import Buy from '../../features/ramp'
@@ -16,11 +16,16 @@ import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useETHBalances } from '../../state/wallet/hooks'
 import { useLingui } from '@lingui/react'
 
+// Add localhost
+const N = NATIVE
+N[1337] = Ether
+
 function AppBar(): JSX.Element {
   const { i18n } = useLingui()
   const { account, chainId, library } = useActiveWeb3React()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
+  // console.log(account, userEthBalance)
 
   return (
     //     // <header className="flex flex-row justify-between w-screen flex-nowrap">
@@ -128,7 +133,7 @@ function AppBar(): JSX.Element {
                       {account && chainId && userEthBalance && (
                         <>
                           <div className="px-3 py-2 text-primary text-bold">
-                            {userEthBalance?.toSignificant(4)} {NATIVE[chainId].symbol}
+                            {userEthBalance?.toSignificant(4)} {N[chainId].symbol || 'ETH'}
                           </div>
                         </>
                       )}

@@ -14,6 +14,7 @@ import { NextComponentType } from 'next'
 import ReactGA from 'react-ga'
 import { Provider as ReduxProvider } from 'react-redux'
 import UserUpdater from '../state/user/updater'
+import MulticallUpdater from '../state/multicall/updater'
 import Web3ReactManager from '../components/Web3ReactManager'
 import { Web3ReactProvider } from '@web3-react/core'
 import dynamic from 'next/dynamic'
@@ -33,6 +34,7 @@ function Updaters() {
     <>
       <UserUpdater />
       <ApplicationUpdater />
+      <MulticallUpdater />
     </>
   )
 }

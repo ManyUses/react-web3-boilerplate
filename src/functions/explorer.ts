@@ -271,6 +271,10 @@ const chains: ChainObject = {
     chainName: '',
     builder: builders.celo,
   },
+  [1337]: {
+    chainName: '',
+    builder: () => '',
+  },
 }
 
 export function getExplorerLink(

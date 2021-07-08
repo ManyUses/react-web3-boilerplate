@@ -1,5 +1,9 @@
 import { ChainId } from '@sushiswap/sdk'
 
+type ChainIds = ChainId & {
+  LOCALHOST: 1337
+}
+
 const Arbitrum = '/images/networks/arbitrum-network.jpg'
 const Avalanche = '/images/networks/avalanche-network.jpg'
 const Bsc = '/images/networks/bsc-network.jpg'
@@ -21,6 +25,7 @@ export const NETWORK_ICON = {
   [ChainId.MAINNET]: Mainnet,
   [ChainId.ROPSTEN]: Ropsten,
   [ChainId.RINKEBY]: Rinkeby,
+  [1337]: Rinkeby,
   [ChainId.GÖRLI]: Goerli,
   [ChainId.KOVAN]: Kovan,
   [ChainId.FANTOM]: Fantom,
@@ -44,12 +49,13 @@ export const NETWORK_ICON = {
   [ChainId.CELO]: Celo,
 }
 
-export const NETWORK_LABEL: { [chainId in ChainId]?: string } = {
+export const NETWORK_LABEL: { [chainId in ChainIds]?: string } = {
   [ChainId.MAINNET]: 'Ethereum',
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
+  [1337]: 'Localhost',
   [ChainId.FANTOM]: 'Fantom',
   [ChainId.FANTOM_TESTNET]: 'Fantom Testnet',
   [ChainId.MATIC]: 'Polygon (Matic)',

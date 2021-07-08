@@ -13,7 +13,7 @@ msgstr ""
 "POT-Creation-Date: \n"
 "Plural-Forms: \n"
 
-#: src/components/Header/index.tsx:65
+#: src/components/Header/index.tsx:70
 msgid "Add USDC to your MetaMask wallet"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr "Rejoignez la communauté sur Discord."
 msgid "Learn more about wallets"
 msgstr ""
 
-#: src/pages/profile.tsx:56
+#: src/pages/profile.tsx:57
 msgid "Loading"
 msgstr "Chargement"
 
@@ -99,7 +99,7 @@ msgstr "Oops! Une erreur inconnue est survenue. Veuillez actualiser la page ou l
 msgid "Open Source"
 msgstr "Open source"
 
-#: src/components/Header/index.tsx:146
+#: src/components/Header/index.tsx:151
 msgid "Open main menu"
 msgstr "Ouvrir le menu principal"
 
@@ -107,17 +107,17 @@ msgstr "Ouvrir le menu principal"
 msgid "Please connect to the appropriate Ethereum network."
 msgstr ""
 
-#: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:188
-#: src/pages/profile.tsx:38
+#: src/components/Header/index.tsx:48
+#: src/components/Header/index.tsx:193
+#: src/pages/profile.tsx:39
 msgid "Profile"
 msgstr ""
 
-#: src/components/Header/index.tsx:51
+#: src/components/Header/index.tsx:56
 msgid "Registry"
 msgstr ""
 
-#: src/pages/profile.tsx:73
+#: src/pages/profile.tsx:74
 msgid "View on explorer"
 msgstr "Voir sur l'explorateur"
 

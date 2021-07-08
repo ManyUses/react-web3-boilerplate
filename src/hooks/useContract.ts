@@ -1,18 +1,20 @@
 import {
   ChainId,
-  FACTORY_ADDRESS,
-  MAKER_ADDRESS,
-  ROUTER_ADDRESS,
-  TIMELOCK_ADDRESS,
-  WETH9,
-  WNATIVE,
+  // FACTORY_ADDRESS,
+  // MAKER_ADDRESS,
+  // ROUTER_ADDRESS,
+  // TIMELOCK_ADDRESS,
+  // WETH9,
+  // WNATIVE,
 } from '@sushiswap/sdk'
 
 import { MULTICALL2_ADDRESS } from '../constants/addresses'
 import { MULTICALL_ABI, MULTICALL_NETWORKS } from '../constants/multicall'
 
 import { Contract } from '@ethersproject/contracts'
-import EIP_2612_ABI from '../constants/abis/eip-2612.json'
+import ENRICHMENT_ABI from '../constants/abis/enrichment.json'
+
+// import EIP_2612_ABI from '../constants/abis/eip-2612.json'
 import ENS_ABI from '../constants/abis/ens-registrar.json'
 import ENS_PUBLIC_RESOLVER_ABI from '../constants/abis/ens-public-resolver.json'
 // import { ERC20_BYTES32_ABI } from '../constants/abis/erc20'
@@ -66,6 +68,10 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
   return useContract(address, ENS_ABI, withSignerIfPossible)
 }
 
+export function useEnrichmentContract(address: string | undefined, withSignerIfPossible?: boolean): Contract | null {
+  return useContract(address, ENRICHMENT_ABI, withSignerIfPossible)
+}
+
 export function useENSResolverContract(address: string | undefined, withSignerIfPossible?: boolean): Contract | null {
   return useContract(address, ENS_PUBLIC_RESOLVER_ABI, withSignerIfPossible)
 }
@@ -82,6 +88,7 @@ export function useMulticallContract(): Contract | null {
 
 export function useMulticall2Contract() {
   const { chainId } = useActiveWeb3React()
+  // console.log(MULTICALL2_ADDRESS[chainId])
   return useContract(chainId && MULTICALL2_ADDRESS[chainId], MULTICALL2_ABI, false)
 }
 
